@@ -146,6 +146,26 @@ __weak static UIViewController *_defaultViewController;
     [self prepareNotificationToBeShown:v];
 }
 
++ (void)showLiveNotification:(UIViewController *)viewController
+                    title:(NSString *)title
+                 streamTitle:(NSString *)subtitle
+                   avatarURL:(NSURL *)avatar
+              buttonCallback:(void (^)())buttonCallback{
+    
+    TSMessageView *v = [[TSMessageView alloc] initWithTitleLive:title
+                                                   subtitle:subtitle
+                                                      image:[UIImage imageNamed:@"logo"]
+                                                       type:TSMessageNotificationTypeWarning
+                                                   duration:NSTimeIntervalSince1970
+                                           inViewController:viewController
+                                                   callback:nil
+                                                buttonTitle:@"Watch"
+                                             buttonCallback:buttonCallback
+                                                 atPosition:TSMessageNotificationPositionTop
+                                       canBeDismissedByUser:YES
+                                                      avatarURL:avatar];
+    [self prepareNotificationToBeShown:v];
+}
 
 + (void)prepareNotificationToBeShown:(TSMessageView *)messageView
 {

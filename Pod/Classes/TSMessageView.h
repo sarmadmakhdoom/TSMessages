@@ -71,6 +71,19 @@
          atPosition:(TSMessageNotificationPosition)position
 canBeDismissedByUser:(BOOL)dismissingEnabled;
 
+- (id)initWithTitleLive:(NSString *)title
+           subtitle:(NSString *)subtitle
+              image:(UIImage *)image
+               type:(TSMessageNotificationType)notificationType
+           duration:(CGFloat)duration
+   inViewController:(UIViewController *)viewController
+           callback:(void (^)())callback
+        buttonTitle:(NSString *)buttonTitle
+     buttonCallback:(void (^)())buttonCallback
+         atPosition:(TSMessageNotificationPosition)position
+canBeDismissedByUser:(BOOL)dismissingEnabled
+              avatarURL: (NSURL *) avatarUrl;
+
 /** Fades out this notification view */
 - (void)fadeMeOut;
 
