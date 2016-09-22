@@ -460,7 +460,8 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
               avatarURL: (NSURL *) avatarUrl
 {
     NSDictionary *notificationDesign = [TSMessageView notificationDesign];
-    
+    //UIApplication.sharedApplication().setStatusBarHidden(false, withAnimation: .Fade)
+    [[UIApplication sharedApplication] setStatusBarHidden:true withAnimation:UIStatusBarAnimationSlide];
     if ((self = [self init]))
     {
         _title = title;
@@ -680,7 +681,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
             self.button.frame = CGRectMake(screenWidth - self.button.frame.size.width,
                                            0,
                                            self.button.frame.size.width,
-                                           actualHeight+20);
+                                           actualHeight);
             
         }
         
@@ -789,7 +790,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
     if (self.button)
     {
         self.button.frame = CGRectMake(self.frame.size.width - self.textSpaceRight,
-                                       -20,
+                                       0,
                                        self.button.frame.size.width,
                                        self.button.frame.size.height);
     }
