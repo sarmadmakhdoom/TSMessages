@@ -178,7 +178,7 @@
                                           title:NSLocalizedString(@"Whoa!", nil)
                                        subtitle:NSLocalizedString(@"Over the Navigation Bar!", nil)
                                           image:nil
-                                           type:TSMessageNotificationTypeSuccess
+                                           type:TSMessageNotificationTypeChat
                                        duration:TSMessageNotificationDurationAutomatic
                                        callback:nil
                                     buttonTitle:nil

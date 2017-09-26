@@ -234,7 +234,12 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
                 currentString = @"warning";
                 break;
             }
-                
+            case TSMessageNotificationTypeChat:
+            {
+                currentString = @"chat";
+                break;
+            }
+
             default:
                 break;
         }

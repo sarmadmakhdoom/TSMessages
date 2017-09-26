@@ -48,7 +48,8 @@ typedef NS_ENUM(NSInteger, TSMessageNotificationType) {
     TSMessageNotificationTypeMessage = 0,
     TSMessageNotificationTypeWarning,
     TSMessageNotificationTypeError,
-    TSMessageNotificationTypeSuccess
+    TSMessageNotificationTypeSuccess,
+    TSMessageNotificationTypeChat
 };
 typedef NS_ENUM(NSInteger, TSMessageNotificationPosition) {
     TSMessageNotificationPositionTop = 0,
