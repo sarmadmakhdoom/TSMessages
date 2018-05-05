@@ -605,7 +605,7 @@ canBeDismissedByUser:(BOOL)dismissingEnabled
                                                   padding,
                                                   50,
                                                   50);
-            self.iconImageView.layer.cornerRadius = 25;
+            self.iconImageView.layer.cornerRadius = 3;
             self.iconImageView.clipsToBounds = YES;
             [self.iconImageView sd_setImageWithURL:avatarUrl];
             [self addSubview:self.iconImageView];
