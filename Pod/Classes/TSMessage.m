@@ -149,6 +149,7 @@ __weak static UIViewController *_defaultViewController;
 + (void)showLiveNotification:(UIViewController *)viewController
                     title:(NSString *)title
                  streamTitle:(NSString *)subtitle
+                 buttonTitle:(NSString *)btitle
                    avatarURL:(NSURL *)avatar
               buttonCallback:(void (^)())buttonCallback{
     
@@ -159,7 +160,7 @@ __weak static UIViewController *_defaultViewController;
                                                    duration:NSTimeIntervalSince1970
                                            inViewController:viewController
                                                    callback:nil
-                                                buttonTitle:@"Watch"
+                                                buttonTitle:btitle
                                              buttonCallback:buttonCallback
                                                  atPosition:TSMessageNotificationPositionTop
                                        canBeDismissedByUser:YES
