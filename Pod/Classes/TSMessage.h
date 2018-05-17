@@ -162,7 +162,7 @@ typedef NS_ENUM(NSInteger,TSMessageNotificationDuration) {
 + (void)showLiveNotification:(UIViewController *)viewController
                                 title:(NSString *)title
                              streamTitle:(NSString *)subtitle
-                             buttonTitle:(NSString *)buttonTitle
+                             buttonTitle:(NSString *)btitle
                                avatarURL:(NSURL *)avatar
                         buttonCallback:(void (^)())buttonCallback;
 
