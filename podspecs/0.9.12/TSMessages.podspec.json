@@ -26,6 +26,7 @@
   "dependencies": {
     "HexColors": [
         "~> 2.2.0"
-    ]
+    ],
+    "SDWebImage"
   }
 }
